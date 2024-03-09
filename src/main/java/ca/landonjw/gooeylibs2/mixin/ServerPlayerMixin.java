@@ -9,8 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerPlayer.class)
 public class ServerPlayerMixin extends PlayerMixin {
-
-    @Inject(method = "doCloseContainer", at = @At(value = "INVOKE", target = "net/minecraft/world/inventory/InventoryMenu.transferState (Lnet/minecraft/world/inventory/AbstractContainerMenu;)V"), cancellable = true)
+    @Inject(method = "doCloseContainer", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/inventory/InventoryMenu;transferState(Lnet/minecraft/world/inventory/AbstractContainerMenu;)V"), cancellable = true)
     public void transferState(CallbackInfo ci) {
         if(this.containerMenu instanceof GooeyContainer) {
             ci.cancel();

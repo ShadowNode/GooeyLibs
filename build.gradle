@@ -37,7 +37,7 @@ minecraft {
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
     //mappings channel: 'snapshot', version: '20171003-1.12'
-    mappings channel: 'parchment', version: '1.18.1-2022.03.06-1.18.2'
+    mappings channel: 'official', version: '1.18.2'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
      accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -67,9 +67,9 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.44'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.14'
 
-    api 'net.kyori:adventure-api:4.9.3'
+    api 'net.kyori:adventure-api:4.10.1'
     api 'net.kyori:adventure-text-serializer-gson:4.9.3'
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
@@ -102,7 +102,7 @@ jar.finalizedBy('reobfJar')
 //publish.dependsOn('reobfJar')
 
 shadowJar {
-    archiveName = "GooeyLibs-1.16.5-${version}.jar"
+    archiveName = "GooeyLibs-1.18.2-${version}.jar"
 
     include {
         dependencies {

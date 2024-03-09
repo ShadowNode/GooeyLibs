@@ -2,7 +2,7 @@
   "required": true,
   "package": "ca.landonjw.gooeylibs2.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "examplemod.refmap.json",
+  "refmap": "mixins.gooeylibs2.refmap.json",
   "mixins": [
     "ServerPlayerMixin",
     "PlayerMixin"
